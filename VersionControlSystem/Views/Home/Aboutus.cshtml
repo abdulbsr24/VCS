@@ -2,4 +2,32 @@
     ViewBag.Title = "Aboutus";
 }
 
+@{
+    string[]tbl = {"Hyderabad","Mumbai","Chennai"};
+}
+
 <h2>Aboutus</h2>
+<table>
+    <tr>
+        <th>
+            S.no
+        </th>
+        <th>
+            Name
+        </th>
+        <th>PhoneNumber</th>
+    </tr>
+
+    @{
+        int Sno=0;
+        foreach(string str in tbl)      
+        {
+            <tr>
+                <td>
+                    @(Sno=Sno+1)
+                </td>
+                <td> @str</td>
+            </tr>
+        }  
+    }
+</table>

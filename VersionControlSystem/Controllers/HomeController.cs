@@ -16,7 +16,12 @@ namespace VersionControlSystem.Controllers
             return View();
         }
 
-        public ActionResult Index()
+        public ActionResult Aboutus()
+        {
+            return View();
+        }
+
+        public ActionResult Contactus()
         {
             return View();
         }
