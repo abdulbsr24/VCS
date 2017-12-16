@@ -3,11 +3,16 @@
 }
 
 @{
-    string[]tbl = {"Hyderabad","Mumbai","Chennai"};
+    //string[]tbl = {"Hyderabad","Mumbai","Chennai"};
+    // using dictionary we can give key value, key as Name and phone no as a value
+    Dictionary<string, long> dic = new Dictionary<string,long>();
+    dic.Add("hyderabad",9966078545);
+    dic.Add("mumbai",9966078546);
+    dic.Add("Chennia",9966078547);
 }
 
 <h2>Aboutus</h2>
-<table>
+<table border="1">
     <tr>
         <th>
             S.no
@@ -20,13 +25,13 @@
 
     @{
         int Sno=0;
-        foreach(string str in tbl)      
+        foreach(var item in dic)      
         {
             <tr>
                 <td>
                     @(Sno=Sno+1)
                 </td>
-                <td> @str</td>
+                <td> @item.Key</td><td>@item.Value</td>
             </tr>
         }  
     }
